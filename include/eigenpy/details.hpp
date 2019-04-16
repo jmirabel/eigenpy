@@ -104,8 +104,6 @@ namespace eigenpy
       NumpyMatrixType = reinterpret_cast<PyTypeObject*>(NumpyMatrixObject.ptr());
       NumpyArrayObject = pyModule.attr("ndarray");
       NumpyArrayType = reinterpret_cast<PyTypeObject*>(NumpyArrayObject.ptr());
-      NumpyAsMatrixObject = pyModule.attr("asmatrix");
-      NumpyAsMatrixType = reinterpret_cast<PyTypeObject*>(NumpyAsMatrixObject.ptr());
       
       CurrentNumpyType = NumpyMatrixObject; // default conversion
     }
@@ -115,7 +113,6 @@ namespace eigenpy
     
     // Numpy types
     bp::object NumpyMatrixObject; PyTypeObject * NumpyMatrixType;
-    bp::object NumpyAsMatrixObject; PyTypeObject * NumpyAsMatrixType;
     bp::object NumpyArrayObject; PyTypeObject * NumpyArrayType;
   };
   
